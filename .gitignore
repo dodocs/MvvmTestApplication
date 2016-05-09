@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BindingExample/BindingExample/bin/x86/Debug
+*.suo
+/BindingExample/BindingExample/obj
