@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media;
 
 namespace BindingExample.Model
 {
@@ -10,7 +11,7 @@ namespace BindingExample.Model
     {
         public string Manufacturer { get; set; }
         public string Model { get; set; }
-        public string Color { get; set; }
+        public Brush Color { get; set; }
         public int Year { get; set; }
     }
 }

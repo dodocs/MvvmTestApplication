@@ -26,7 +26,7 @@ namespace BindingExample.View
         public MainPage()
         {
             this.InitializeComponent();
-            DataContext = new MainPageViewModel();
+            //DataContext = new MainPageViewModel();
         }
     }
 }
