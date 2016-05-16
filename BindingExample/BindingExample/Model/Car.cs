@@ -12,6 +12,6 @@ namespace BindingExample.Model
         public string Manufacturer { get; set; }
         public string Model { get; set; }
         public Brush Color { get; set; }
-        public int Year { get; set; }
+        public int? Year { get; set; }
     }
 }

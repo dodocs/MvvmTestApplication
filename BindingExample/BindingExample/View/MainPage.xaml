@@ -6,10 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:vm="using:BindingExample.ViewModel">
+    xmlns:vm="using:BindingExample.ViewModel"
+    xmlns:converter="using:BindingExample.Converter">
     <Page.DataContext>
         <vm:MainPageViewModel />
     </Page.DataContext>
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <converter:NullToVisibilityConverter x:Key="nullToVisibilityConverter" />
+        </ResourceDictionary>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -28,7 +35,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="{Binding Manufacturer}" Margin="0,0,5,0" Grid.Column="0" />
                         <TextBlock Text="{Binding Model}" Margin="0,0,5,0" Grid.Column="1" />
-                        <TextBlock Text="-" Margin="0,0,5,0" Grid.Column="2" />
+                        <TextBlock Text="-" Margin="0,0,5,0" Grid.Column="2" Visibility="{Binding Year, Converter={StaticResource nullToVisibilityConverter}}" />
                         <TextBlock Text="{Binding Year}" Margin="0,0,5,0" Grid.Column="3" />
                     </Grid>
                 </DataTemplate>

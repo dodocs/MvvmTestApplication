@@ -30,7 +30,6 @@ namespace BindingExample.ViewModel
                 Manufacturer = "Audi",
                 Model = "S3",
                 Color = new SolidColorBrush(Colors.Red),
-                Year = 2016
             });
             Cars.Add(new Car
             {
@@ -79,14 +78,12 @@ namespace BindingExample.ViewModel
                 Manufacturer = "Audi",
                 Model = "S3",
                 Color = new SolidColorBrush(Colors.Green),
-                Year = 2016
             });
             Cars.Add(new Car
             {
                 Manufacturer = "Audi",
                 Model = "S3",
                 Color = new SolidColorBrush(Colors.Green),
-                Year = 2016
             });
             Cars.Add(new Car
             {
@@ -129,5 +126,6 @@ namespace BindingExample.ViewModel
         public ObservableCollection<string> Vehicles { get; set; }
 
         public RelayCommand AddCarCommand { get; set; }
+
     }
 }
